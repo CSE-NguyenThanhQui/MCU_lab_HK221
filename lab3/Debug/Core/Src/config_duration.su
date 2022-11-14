@@ -1,0 +1,4 @@
+config_duration.c:17:6:modify_traffic_buffer	16	static
+config_duration.c:24:6:change_mode_buffer	16	static
+config_duration.c:47:6:inc_temp_led_duration	8	static
+config_duration.c:54:6:update_led_duration	16	static

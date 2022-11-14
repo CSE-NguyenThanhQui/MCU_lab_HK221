@@ -1,0 +1,4 @@
+input_processing.c:15:6:init_state	16	static
+input_processing.c:21:6:fsm_input_processing	16	static
+input_processing.c:43:6:isFlagPressed	16	static
+input_processing.c:52:6:isFlagLongPressed	16	static

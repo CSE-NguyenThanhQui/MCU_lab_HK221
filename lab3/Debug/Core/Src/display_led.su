@@ -1,0 +1,11 @@
+display_led.c:15:6:clear_all_led	8	static
+display_led.c:23:6:display_test_led	8	static
+display_led.c:27:6:clear_test_led	8	static
+display_led.c:31:6:blink_led	16	static
+display_led.c:49:6:display_blinky_led	16	static
+display_led.c:56:6:update_time_buffer	16	static
+display_led.c:61:6:display_7_seg	16	static
+display_led.c:118:6:enable_7_seg	16	static
+display_led.c:143:6:display_traffic	16	static
+display_led.c:192:6:display_light	16	static
+display_led.c:235:6:display_time	8	static

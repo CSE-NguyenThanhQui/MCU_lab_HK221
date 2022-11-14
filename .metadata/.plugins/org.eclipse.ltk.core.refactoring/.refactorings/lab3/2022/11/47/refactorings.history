@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;lab3/Core/Src/fsm_mode_traffic.c&apos; to &apos;fsm_run.c&apos;" description="Rename resource &apos;fsm_mode_traffic.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/fsm_mode_traffic.c" name="fsm_run.c" stamp="1668446724597" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;lab3/Core/Inc/fsm_mode_traffic.h&apos; to &apos;fsm_run.h&apos;" description="Rename resource &apos;fsm_mode_traffic.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/fsm_mode_traffic.h" name="fsm_run.h" stamp="1668446766682" updateReferences="true"/>
+</session>
