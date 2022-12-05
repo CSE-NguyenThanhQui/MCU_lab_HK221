@@ -1,0 +1,2 @@
+scheduler_helper.c:10:12:make	32	static
+scheduler_helper.c:21:6:delete	16	static

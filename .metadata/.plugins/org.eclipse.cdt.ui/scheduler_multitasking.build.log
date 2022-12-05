@@ -1,0 +1,51 @@
+23:20:52 **** Incremental Build of configuration Debug for project scheduler_multitasking ****
+make -j2 all 
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/scheduler.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/scheduler.d" -MT"Core/Src/scheduler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/scheduler.o"
+../Core/Src/scheduler.c: In function 'SCH_Add_To_List':
+arm-none-eabi-gcc "../Core/Src/scheduler_helper.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/scheduler_helper.d" -MT"Core/Src/scheduler_helper.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/scheduler_helper.o"
+../Core/Src/scheduler.c:43:12: warning: assignment to 'schedTask *' {aka 'struct <anonymous> *'} from incompatible pointer type 'struct schedTask *' [-Wincompatible-pointer-types]
+   43 |   currTask = currTask->nextTask;
+      |            ^
+../Core/Src/scheduler.c:47:18: warning: assignment to 'struct schedTask *' from incompatible pointer type 'schedTask *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+   47 |   task->nextTask = SCH_tasks_G.head;
+      |                  ^
+../Core/Src/scheduler.c:59:17: warning: assignment to 'struct schedTask *' from incompatible pointer type 'schedTask *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+   59 |  task->nextTask = currTask;
+      |                 ^
+../Core/Src/scheduler.c:60:21: warning: assignment to 'struct schedTask *' from incompatible pointer type 'schedTask *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+   60 |  prevTask->nextTask = task;
+      |                     ^
+../Core/Src/scheduler.c: In function 'SCH_Get_From_List':
+../Core/Src/scheduler.c:65:19: warning: assignment to 'schedTask *' {aka 'struct <anonymous> *'} from incompatible pointer type 'struct schedTask *' [-Wincompatible-pointer-types]
+   65 |  SCH_tasks_G.head = task->nextTask;
+      |                   ^
+../Core/Src/scheduler.c: In function 'SCH_queue_push':
+../Core/Src/scheduler.c:78:28: warning: assignment to 'struct schedTask *' from incompatible pointer type 'schedTask *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+   78 |   SCH_queue.tail->nextTask = task;
+      |                            ^
+../Core/Src/scheduler.c: In function 'SCH_queue_pop':
+../Core/Src/scheduler.c:86:17: warning: assignment to 'schedTask *' {aka 'struct <anonymous> *'} from incompatible pointer type 'struct schedTask *' [-Wincompatible-pointer-types]
+   86 |  SCH_queue.head = task->nextTask;
+      |                 ^
+arm-none-eabi-gcc -o "scheduler_multitasking.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NGUYEN THANH QUI\Desktop\MCU_MPU_Lab04-main\scheduler_multitasking\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="scheduler_multitasking.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: scheduler_multitasking.elf
+ 
+arm-none-eabi-size   scheduler_multitasking.elf 
+arm-none-eabi-objdump -h -S  scheduler_multitasking.elf  > "scheduler_multitasking.list"
+   text	   data	    bss	    dec	    hex	filename
+  14008	    120	   1808	  15936	   3e40	scheduler_multitasking.elf
+Finished building: default.size.stdout
+Finished building: scheduler_multitasking.list
+ 
+arm-none-eabi-objcopy  -O ihex  scheduler_multitasking.elf  "scheduler_multitasking.hex"
+ 
+arm-none-eabi-objcopy  -O binary  scheduler_multitasking.elf  "scheduler_multitasking.bin"
+Finished building: scheduler_multitasking.hex
+ 
+Finished building: scheduler_multitasking.bin
+ 
+
+23:20:57 Build Finished. 0 errors, 7 warnings. (took 4s.358ms)
+

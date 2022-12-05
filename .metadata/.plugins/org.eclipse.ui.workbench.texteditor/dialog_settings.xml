@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="led_display"/>
+		<list key="findhistory">
+			<item value="toggle_led"/>
+			<item value="SCH_ready_queue"/>
+			<item value="//get first element of the list and soft remove it"/>
+			<item value="Helper"/>
+			<item value="SCH_Delete_Task_Helper"/>
+			<item value="archv_SCH_Add_Task"/>
+			<item value="archv_SCH_Dispatch_Tasks"/>
+			<item value="archv_SCH_Update"/>
+			<item value="archv_SCH_Init"/>
+			<item value="uart_send_str"/>
+			<item value="uart_send_num"/>
+			<item value="Init_UART"/>
+			<item value="uart_init"/>
+			<item value=" uart_send_str"/>
+		</list>
+		<list key="replacehistory">
+			<item value="led_display"/>
+			<item value="SCH_queue"/>
+			<item value="SCH_Add_Task_Helper"/>
+			<item value="SCH_Dispatch_Tasks_Helper"/>
+			<item value="SCH_Update_Helper"/>
+			<item value="SCH_Init_Helper"/>
+			<item value="Str_UART"/>
+			<item value="Digit_UART"/>
+			<item value="uart_init"/>
+			<item value=""/>
+			<item value="Init_UART"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="936"/>
+		<item key="DIALOG_Y_ORIGIN" value="183"/>
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>
